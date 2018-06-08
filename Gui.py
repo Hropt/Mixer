@@ -1,5 +1,6 @@
 import tkinter
 import MakeDrink
+import sys
 
 mainWindow = tkinter.Tk()
 global size
@@ -43,6 +44,12 @@ def init_order():
     else:
         print("Choose drink.")
 
+def close(event):
+    sys.exit() # if you want to exit the entire thing
+
+#binds escape to close def.
+mainWindow.bind('<Escape>', close)
+
 #Drink select buttons
 gtBtn = tkinter.Button(mainWindow, text = "Gin & tonic", background='gray')
 clBtn = tkinter.Button(mainWindow, text = "Cuba libre", background='gray')
@@ -76,17 +83,21 @@ select_size_text = tkinter.Label(mainWindow, text ="Select size:")
 #Placing buttons
 select_drink_text.grid(column = 2, row = 1, padx = 10, pady = 20)
 
-gtBtn.grid(column = 1, row = 2, padx = 10, pady = 20, ipady = 10, ipadx = 10)
+gtBtn.grid(column = 1, row = 2, padx = (244, 10), pady = 20, ipady = 10, ipadx = 10)
 clBtn.grid(column = 2, row = 2, padx = 10, pady = 20, ipady = 10, ipadx = 10)
 jcBtn.grid(column = 3, row = 2, padx = 10, pady = 20, ipady = 10, ipadx = 10)
 
 select_size_text.grid(column = 2, row = 3, padx = 10, pady = 20)
 
-small.grid(column = 1, row = 4, padx = 10, pady = 20, ipady = 10, ipadx = 10)
+small.grid(column = 1, row = 4, padx =(244, 10), pady = 20, ipady = 10, ipadx = 10)
 medium.grid(column = 2, row = 4, padx = 10, pady = 20, ipady = 10, ipadx = 10)
 large.grid(column = 3, row = 4, padx = 10, pady = 20, ipady = 10, ipadx = 10)
 
 order.grid(column = 2, row = 5, padx = 10, pady = 20, ipady = 10, ipadx = 10)
 
+
+mainWindow.attributes("-fullscreen", True)
 mainWindow.mainloop()
+
+
 
