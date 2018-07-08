@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>DrinkBot2000</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:100,300,400" rel="stylesheet">
+      <script type="text/javascript" src="js/javascript.js"></script>
+
+  </head>
+  <body onload="init()">
+<div id="hscroll">
+    <div id="hscroll-wrap">
+        <div class="box" id="box1">
+            <h2>Select drink</h2>
+            <p onclick="selectDrink(1)" id="1"> &nbspGin & Tonic</p>
+            <p onclick="selectDrink(2)" id="2"> &nbspJack & Coke</p>
+            <p onclick="selectDrink(3)" id="3"> &nbspJaegerbomb</p>
+            <button id="box1button" class="slideRightBtn" onclick="slideRight()">&#x21E2;</button>
+        </div>
+
+        <div class="box" id="box2">
+            <h2>Select size</h2>
+            <p onclick="selectSize(11)" id="11">&nbsp Small</p>
+            <p onclick="selectSize(12)" id="12">&nbsp Medium</p>
+            <p onclick="selectSize(13)" id="13">&nbsp Large</p>
+            <button id="box2button" class="slideRightBtn" onclick="slideRight()">&#x21E2;</button>
+            <button id="slideLeft" onclick="slideLeft()">&#8630;</button>
+        </div>
+
+        <div class="box" id="box3">
+            <h2>Confirm order</h2>
+            <p id="selectedDrink">&nbsp Drink: </p>
+            <p id="selectedSize">&nbsp Size: </p>
+            <p id="alcContent">&nbsp Alc. content: </p>
+            <button id="box3button" class="slideRightBtn" onclick="slideRight()">&#x21E2;</button>
+            <button id="slideLeft" onclick="slideLeft()">&#8630;</button>
+        </div>
+
+        <div class="box" id="box4">
+            <h2>Please wait</h2>
+            <div class="loader"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="slideButtons">
+  <div id="dots">
+    <p id="dot1">.</p>
+    <p id="dot2">.</p>
+    <p id="dot3">.</p>
+    <p id="dot4">.</p>
+  </div>
+</div>
+
+  </body>
+</html>
